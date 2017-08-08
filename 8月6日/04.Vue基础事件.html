@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue中基础事件-v-on:click</title>
+</head>
+<style>
+    button{
+        width: 100px;
+        height: 40px;
+    }
+</style>
+<script src="vue.js"></script>
+<body>
+<div id="box">
+    <button type="button" v-on:click="show()">按钮</button>
+    <button type="button" v-on:click="add()">点击添加水果</button>
+    <ul>
+        <li v-for="msg in arr">{{msg}}</li>
+    </ul>
+</div>
+<script>
+    new Vue({
+        el:"#box",
+        data:{
+            arr:["apple","peal","banana"]
+        },
+        methods:{
+            show:function () {
+                alert(1);
+            },
+            add:function () {
+                this.arr.push("tomato")
+            },
+        }
+    })
+</script>
+</body>
+</html>

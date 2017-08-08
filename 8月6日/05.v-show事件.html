@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>V-show事件</title>
+</head>
+<script src="vue.js"></script>
+<body>
+<div id="box">
+    <button type="button" v-on:click="Dishow()">点击消失</button>
+    <div style="width: 100px;height: 100px;background-color: #ccc" v-show="a"></div>
+</div>
+<script>
+    new Vue({
+        el:"#box",
+        data:{
+            a:true
+        },
+        methods:{
+            Dishow:function () {
+                this.a=false;
+            }
+        }
+    })
+</script>
+</body>
+</html>
